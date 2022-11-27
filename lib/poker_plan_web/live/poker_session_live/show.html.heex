@@ -1,0 +1,31 @@
+<h1>Show Poker session</h1>
+
+<%= if @live_action in [:edit] do %>
+  <.modal return_to={Routes.poker_session_show_path(@socket, :show, @poker_session)}>
+    <.live_component
+      module={PokerPlanWeb.PokerSessionLive.FormComponent}
+      id={@poker_session.id}
+      title={@page_title}
+      action={@live_action}
+      poker_session={@poker_session}
+      return_to={Routes.poker_session_show_path(@socket, :show, @poker_session)}
+    />
+  </.modal>
+<% end %>
+
+<ul>
+
+  <li>
+    <strong>Guid:</strong>
+    <%= @poker_session.guid %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @poker_session.name %>
+  </li>
+
+</ul>
+
+<span><%= live_patch "Edit", to: Routes.poker_session_show_path(@socket, :edit, @poker_session), class: "button" %></span> |
+<span><%= live_redirect "Back", to: Routes.poker_session_index_path(@socket, :index) %></span>
