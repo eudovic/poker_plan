@@ -16,15 +16,15 @@ defmodule PokerPlanWeb.Router do
 
   scope "/", PokerPlanWeb do
     pipe_through :browser
+    get "/aboutit", AboutItController, :index
 
-    get "/", PageController, :index
+    live "/", PokerSessionLive.Index, :index
+    live "/new", PokerSessionLive.Index, :new
+    live "/:id/edit", PokerSessionLive.Index, :edit
 
-    live "/poker_sessions", PokerSessionLive.Index, :index
-    live "/poker_sessions/new", PokerSessionLive.Index, :new
-    live "/poker_sessions/:id/edit", PokerSessionLive.Index, :edit
+    live "/:id", PokerSessionLive.Show, :show
+    live "/:id/show/edit", PokerSessionLive.Show, :edit
 
-    live "/poker_sessions/:id", PokerSessionLive.Show, :show
-    live "/poker_sessions/:id/show/edit", PokerSessionLive.Show, :edit
 
   end
 

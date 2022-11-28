@@ -11,17 +11,15 @@
   </head>
   <body>
     <header>
-      <section class="container">
+      <section class="container-fluid">
         <nav>
           <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
+            <li><a href="aboutit">About The Game</a></li>
+            <li><a href="https://github.com/eudovic/poker_plan">Repository</a></li>
           </ul>
         </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
+        <a class="phx-logo" href="/">
+          <img src={Routes.static_path(@conn, "/images/pokerplan-logo.png")} alt="Poker plan Logo"/>
         </a>
       </section>
     </header>

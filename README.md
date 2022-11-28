@@ -15,7 +15,7 @@ Just a simple poken plan thats use fibonacci scale and calculate votes average.
 ![](https://emersonudovicmedias.s3.amazonaws.com/POKER+PLAN+-+resuting.jpeg)
 
 ### Technologies
-That's a Elixir/Phoenix project, using javascript and webpack.
+That's a Elixir/Phoenix project.
 ![](https://elixir-lang.org/images/logo/logo.png)
 
 ![](https://cdn.dribbble.com/users/284576/screenshots/1612621/phoenixframework.png)
